@@ -762,9 +762,21 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 .price-tag {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  gap: 2px;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  min-width: 80px;
+}
+.price-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
 }
 .price-label {
   font-family: var(--font-display);
