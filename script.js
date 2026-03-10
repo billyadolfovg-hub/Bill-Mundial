@@ -1,4 +1,3 @@
-
 /* ==============================================
    BILL MUNDIAL – script.js
    Particles · Products · Nav · Interactions
@@ -108,6 +107,15 @@ function toggleDescription(btn) {
 }
 window.toggleDescription = toggleDescription;
 
+function togglePayment(btn) {
+  const card = btn.closest('.product-card');
+  const payPanel = card.querySelector('.card-payment-methods');
+  const isOpen = payPanel.classList.toggle('open');
+  btn.classList.toggle('active', isOpen);
+  btn.setAttribute('aria-expanded', isOpen);
+}
+window.togglePayment = togglePayment;
+
 // ─────────────────────────────────────────────
 // RENDER PRODUCT CARDS
 // ─────────────────────────────────────────────
@@ -144,19 +152,13 @@ function renderProducts() {
           <p class="card-detail">${p.detail}</p>
           <div class="card-price">
             <div class="price-tag price-tag--soles">
-              <span class="pay-badge yape-badge" title="Yape">yape</span>
+              <span class="price-label">S/</span>
               <span class="price-value">${p.priceSoles}</span>
-              <span class="pay-badge plin-badge" title="Plin">plin</span>
             </div>
             <span class="price-divider">ó</span>
             <div class="price-tag price-tag--usdt">
-              <span class="pay-badge binance-badge" title="Binance">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 12l-4-4-4 4 1.5 1.5L12 11l2.5 2.5L16 12zM12 4L8 8l1.5 1.5L12 7l2.5 2.5L16 8l-4-4zM12 20l4-4-1.5-1.5L12 17l-2.5-2.5L8 16l4 4zM4 12l4-4 1.5 1.5L7 12l2.5 2.5L8 16l-4-4zm16 0l-4 4-1.5-1.5L17 12l-2.5-2.5L16 8l4 4z"/></svg>
-              </span>
               <span class="price-value">${p.priceUSDT}</span>
-              <span class="pay-badge paypal-badge" title="PayPal">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.067 8.478c.492.88.556 2.014.3 3.327-.74 3.806-3.276 5.12-6.514 5.12h-.5a.805.805 0 00-.794.68l-.04.22-.63 3.993c-.032.201-.24.382-.477.382h-3.32c-.317 0-.54-.287-.492-.61l2.583-16.14c.045-.29.314-.509.61-.509h4.38c2.18-.009 3.52.277 4.195 1.258.497.72.636 1.636.564 2.51l.135-.231zm-3.411 2.378c.178-1.121.144-1.928-.276-2.518-.328-.46-.867-.655-1.633-.666h-2.146l-1.93 12.064h2.2a.804.804 0 00.793-.68l.044-.279.462-2.923c.03-.201.24-.382.476-.382h.682c2.094 0 3.73-.83 4.223-3.084.184-1.002.106-1.527-.2-1.89l-.695.358z"/></svg>
-              </span>
+              <span class="price-label">USDT</span>
             </div>
           </div>
           <div class="card-actions">
@@ -164,10 +166,24 @@ function renderProducts() {
               ${waIconSVG}
               Comprar
             </button>
+            <button class="btn-desc-toggle" onclick="togglePayment(this)" aria-expanded="false">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 4H3a2 2 0 00-2 2v12a2 2 0 002 2h18a2 2 0 002-2V6a2 2 0 00-2-2z"/><path d="M1 10h22"/></svg>
+              Métodos de pago
+            </button>
             <button class="btn-desc-toggle" onclick="toggleDescription(this)" aria-expanded="false">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
               Descripción
             </button>
+          </div>
+          <div class="card-payment-methods">
+            <span class="pay-badge yape-badge" title="Yape">yape</span>
+            <span class="pay-badge plin-badge" title="Plin">plin</span>
+            <span class="pay-badge binance-badge" title="Binance">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 12l-4-4-4 4 1.5 1.5L12 11l2.5 2.5L16 12zM12 4L8 8l1.5 1.5L12 7l2.5 2.5L16 8l-4-4zM12 20l4-4-1.5-1.5L12 17l-2.5-2.5L8 16l4 4zM4 12l4-4 1.5 1.5L7 12l2.5 2.5L8 16l-4-4zm16 0l-4 4-1.5-1.5L17 12l-2.5-2.5L16 8l4 4z"/></svg>
+            </span>
+            <span class="pay-badge paypal-badge" title="PayPal">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.067 8.478c.492.88.556 2.014.3 3.327-.74 3.806-3.276 5.12-6.514 5.12h-.5a.805.805 0 00-.794.68l-.04.22-.63 3.993c-.032.201-.24.382-.477.382h-3.32c-.317 0-.54-.287-.492-.61l2.583-16.14c.045-.29.314-.509.61-.509h4.38c2.18-.009 3.52.277 4.195 1.258.497.72.636 1.636.564 2.51l.135-.231zm-3.411 2.378c.178-1.121.144-1.928-.276-2.518-.328-.46-.867-.655-1.633-.666h-2.146l-1.93 12.064h2.2a.804.804 0 00.793-.68l.044-.279.462-2.923c.03-.201.24-.382.476-.382h.682c2.094 0 3.73-.83 4.223-3.084.184-1.002.106-1.527-.2-1.89l-.695.358z"/></svg>
+            </span>
           </div>
           <div class="card-full-desc">
             <p>${p.fullDesc}</p>
