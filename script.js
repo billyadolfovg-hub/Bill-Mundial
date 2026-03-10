@@ -1,3 +1,5 @@
+
+
 /* ==============================================
    BILL MUNDIAL – script.js
    Particles · Products · Nav · Interactions
@@ -10,7 +12,7 @@
 // ─────────────────────────────────────────────
 const PRODUCTS = [
   {
-    id: 1, icon: '⚡', img: new URL('./images/chatgpt-pro.jpeg', import.meta.url).href,
+    id: 1, icon: '⚡', img: 'images/chatgpt-pro.jpeg',
     category: 'ia',
     title: 'Chat GPT Pro / 1 Mes',
     desc: 'Activación solo con tu correo!!',
@@ -19,7 +21,7 @@ const PRODUCTS = [
     fullDesc: '<strong>Máxima Potencia sin Límites:</strong> Acceso total y prioritario a 5.4 Pro y los modelos de razonamiento avanzado o1, sin restricciones de mensajes y con respuestas instantáneas.<br><br><strong>Análisis y Creación Profesional:</strong> Procesa bases de datos complejas en Excel, genera imágenes en alta resolución con DALL-E 3 e investiga con acceso a internet en tiempo real.<br><br><strong>Contexto y Memoria Expandida:</strong> Capacidad para leer y analizar documentos masivos (libros o códigos extensos) en una sola sesión sin perder el hilo de la información.<br><br><strong>Interacción Multimodal:</strong> Usa el Modo de Voz Avanzado para diálogos naturales y la Visión de IA para analizar fotos, diagramas o notas manuscritas al instante.'
   },
   {
-    id: 2, icon: '🎨', img: new URL('./images/panel-canva-500.jpeg', import.meta.url).href,
+    id: 2, icon: '🎨', img: 'images/panel-canva-500.jpeg',
     category: 'diseno',
     title: 'Panel Canva 500 usuarios / 3 años',
     desc: 'Activación solo con tu correo!!',
@@ -28,7 +30,7 @@ const PRODUCTS = [
     fullDesc: '<strong>Habilitar el modo PRO hasta un máximo de 500 personas.</strong><br><br><strong>IA de un clic:</strong> Borra fondos, elimina objetos y cambia el tamaño de tus diseños automáticamente.<br><br><strong>Contenido Total:</strong> Uso ilimitado de 100 millones de fotos, videos y audios premium sin marcas de agua.<br><br><strong>Control de Marca (solo el admin):</strong> Guarda tus logos, colores y fuentes para que todo combine siempre de forma automática.<br><br><strong>Potencia de Archivo:</strong> 1 TB de espacio y descargas en máxima calidad (fondo transparente y vectores).<br><br><strong>Asistente Inteligente:</strong> Redacción automática de textos y programación de publicaciones en redes sociales.'
   },
   {
-    id: 3, icon: '📘', img: new URL('./images/office-365.jpeg', import.meta.url).href,
+    id: 3, icon: '📘', img: 'images/office-365.jpeg',
     category: 'productividad',
     title: 'Microsoft Office 365 / 1 Año',
     desc: 'Activación solo con tu correo!!',
@@ -37,7 +39,7 @@ const PRODUCTS = [
     fullDesc: '<strong>Multi-instalación:</strong> Instala y usa las aplicaciones completas (Word, Excel, PowerPoint) en hasta 5 dispositivos a la vez.<br><br><strong>Nube Gigante:</strong> Obtienes 1 TB (1,000 GB) de almacenamiento privado en OneDrive con autoguardado y recuperación de versiones.<br><br><strong>Diseño con IA:</strong> Crea diapositivas automáticas en PowerPoint y obtén correcciones avanzadas de estilo y tono en Word.<br><br><strong>Contenido Pro:</strong> Acceso libre a miles de imágenes de stock, iconos, fuentes exclusivas y edición de video en 4K con Clipchamp.<br><br><strong>Excel y Correo Pro:</strong> Desbloqueas funciones de datos avanzadas en Excel y un Outlook sin publicidad con seguridad reforzada.'
   },
   {
-    id: 4, icon: '🎯', img: new URL('./images/canva-pro-personal.jpeg', import.meta.url).href,
+    id: 4, icon: '🎯', img: 'images/canva-pro-personal.jpeg',
     category: 'diseno',
     title: 'Canva PRO - personal / 3 años',
     desc: 'Activación solo con tu correo!!',
@@ -46,7 +48,7 @@ const PRODUCTS = [
     fullDesc: '<strong>Habilitar el modo PRO hasta un máximo de 500 personas por 3 años.</strong><br><br><strong>IA de un clic:</strong> Borra fondos, elimina objetos y cambia el tamaño de tus diseños automáticamente.<br><br><strong>Contenido Total:</strong> Uso ilimitado de 100 millones de fotos, videos y audios premium sin marcas de agua.<br><br><strong>Potencia de Archivo:</strong> 1 TB de espacio y descargas en máxima calidad (fondo transparente y vectores).<br><br><strong>Asistente Inteligente:</strong> Redacción automática de textos y programación de publicaciones en redes sociales.'
   },
   {
-    id: 5, icon: '🎬', img: new URL('./images/capcut-pro.jpeg', import.meta.url).href,
+    id: 5, icon: '🎬', img: 'images/capcut-pro.jpeg',
     category: 'diseno',
     title: 'CapCut Pro / 1 Mes',
     desc: 'Se te brinda una cuenta',
@@ -55,7 +57,7 @@ const PRODUCTS = [
     fullDesc: '<strong>IA de Edición Pro:</strong> Elimina fondos de video sin pantalla verde, usa retoque corporal avanzado y vincula objetos al movimiento con Seguimiento de Cámara.<br><br><strong>Recursos Exclusivos:</strong> Acceso total a efectos, transiciones, filtros y una biblioteca de música y sonidos premium sin marcas de agua.<br><br><strong>Audio Inteligente:</strong> Genera subtítulos automáticos con estilos Pro, elimina el ruido de fondo y separa la voz de la música con un solo clic.<br><br><strong>Calidad de Cine:</strong> Exporta tus proyectos en máxima resolución 4K a 60 FPS para una fluidez profesional en cualquier pantalla.<br><br><strong>Nube y Marca Limpia:</strong> Sincroniza tus proyectos entre PC y celular con almacenamiento ampliado y elimina cualquier logo de CapCut al exportar.'
   },
   {
-    id: 6, icon: '🖥️', img: new URL('./images/windows-11-pro.jpeg', import.meta.url).href,
+    id: 6, icon: '🖥️', img: 'images/windows-11-pro.jpeg',
     category: 'sistema',
     title: 'Windows 11 Pro / Permanente',
     desc: 'Clave KEY Original',
@@ -64,7 +66,7 @@ const PRODUCTS = [
     fullDesc: '<strong>Activación Perpetua:</strong> Licencia original de por vida que no caduca nunca y se reactiva automáticamente al formatear o reinstalar el sistema.<br><br><strong>Cifrado BitLocker:</strong> Seguridad profesional que blinda todo tu disco duro para que nadie acceda a tus archivos si te roban la computadora.<br><br><strong>Escritorio Remoto:</strong> Capacidad de conectarte y controlar tu PC desde cualquier lugar del mundo usando otro dispositivo.<br><br><strong>Seguridad Virtualizada:</strong> Incluye un Sandbox (entorno aislado) para abrir archivos sospechosos sin riesgo de infectar tu sistema principal.<br><br><strong>Control Total:</strong> Gestión avanzada de actualizaciones, directivas de grupo y Hyper-V para crear máquinas virtuales de forma nativa.'
   },
   {
-    id: 7, icon: '🔍', img: new URL('./images/perplexity-pro.jpeg', import.meta.url).href,
+    id: 7, icon: '🔍', img: 'images/perplexity-pro.jpeg',
     category: 'ia',
     title: 'Perplexity Pro / 1 Año',
     desc: 'Activación solo con tu correo!!',
@@ -73,7 +75,7 @@ const PRODUCTS = [
     fullDesc: '<strong>Multimodelo de IA:</strong> Elige libremente entre los mejores cerebros del mundo (GPT-5.4, Claude 4.6, Gemini 3.1 Pro y Kimi K 2.5).<br><br><strong>Búsqueda Profunda (Pro Search):</strong> Realiza investigaciones exhaustivas en cientos de fuentes con más de 300 consultas diarias guiadas.<br><br><strong>Análisis de Archivos:</strong> Sube documentos, PDFs o libros completos de forma ilimitada para que la IA los resuma o extraiga datos.<br><br><strong>Privacidad y Velocidad:</strong> Navegación ultra rápida con prioridad en servidores y opción de proteger tus datos para que no entrenen a la IA.'
   },
   {
-    id: 8, icon: '🛡️', img: new URL('./images/avast-premium.jpeg', import.meta.url).href,
+    id: 8, icon: '🛡️', img: 'images/avast-premium.jpeg',
     category: 'seguridad',
     title: 'Avast Premium Security / 1 Año',
     desc: 'Clave KEY Original',
@@ -82,7 +84,7 @@ const PRODUCTS = [
     fullDesc: '<strong>Privacidad Total:</strong> Bloquea el acceso no autorizado a tu webcam, protege tus contraseñas y destruye archivos sensibles para que sean irrecuperables.<br><br><strong>Escudo Anti-Hackers:</strong> Incluye un Firewall avanzado y bloquea intentos de control remoto para que nadie manipule tu PC a distancia.<br><br><strong>Navegación Segura:</strong> Verifica que los sitios web sean reales (Protección DNS) para evitar estafas bancarias y robos de datos al comprar.<br><br><strong>Anti-Secuestro de Datos:</strong> Su escudo contra Ransomware impide que virus cifren tus fotos o documentos para pedirte dinero por ellos.<br><br><strong>Entorno Seguro (Sandbox):</strong> Permite abrir archivos sospechosos en un espacio aislado para que, si tienen virus, no dañen tu computadora.'
   },
   {
-    id: 9, icon: '🔒', img: new URL('./images/mcafee-total.jpeg', import.meta.url).href,
+    id: 9, icon: '🔒', img: 'images/mcafee-total.jpeg',
     category: 'seguridad',
     title: 'McAfee Total Protection / 1 Año',
     desc: 'Clave KEY Original',
@@ -367,4 +369,3 @@ document.addEventListener('DOMContentLoaded', () => {
     initMasonry();
   });
 });
-
