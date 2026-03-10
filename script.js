@@ -1,5 +1,4 @@
 
-
 /* ==============================================
    BILL MUNDIAL – script.js
    Particles · Products · Nav · Interactions
@@ -94,8 +93,8 @@ const PRODUCTS = [
   },
 ];
 
-function openWhatsApp(productName) {
-  const msg = encodeURIComponent(`Hola, me interesa el ${productName}. ¿Me pueden dar más información?`);
+function openWhatsApp(productName, productDesc) {
+  const msg = encodeURIComponent(`Hola, me interesa comprar: ${productName} - ${productDesc}. ¿Me pueden dar más información?`);
   window.open(`https://wa.me/51918790322?text=${msg}`, '_blank', 'noopener');
 }
 window.openWhatsApp = openWhatsApp;
@@ -155,7 +154,7 @@ function renderProducts() {
             </div>
           </div>
           <div class="card-actions">
-            <button class="btn btn--buy" onclick="openWhatsApp('${p.title}')">
+            <button class="btn btn--buy" onclick="openWhatsApp('${p.title}', '${p.desc}')">
               ${waIconSVG}
               Comprar
             </button>
