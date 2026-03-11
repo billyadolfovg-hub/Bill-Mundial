@@ -55,6 +55,15 @@ const PRODUCTS = [
     fullDesc: '<strong>IA de Edición Pro:</strong> Elimina fondos de video sin pantalla verde, usa retoque corporal avanzado y vincula objetos al movimiento con Seguimiento de Cámara.<br><br><strong>Recursos Exclusivos:</strong> Acceso total a efectos, transiciones, filtros y una biblioteca de música y sonidos premium sin marcas de agua.<br><br><strong>Audio Inteligente:</strong> Genera subtítulos automáticos con estilos Pro, elimina el ruido de fondo y separa la voz de la música con un solo clic.<br><br><strong>Calidad de Cine:</strong> Exporta tus proyectos en máxima resolución 4K a 60 FPS para una fluidez profesional en cualquier pantalla.<br><br><strong>Nube y Marca Limpia:</strong> Sincroniza tus proyectos entre PC y celular con almacenamiento ampliado y elimina cualquier logo de CapCut al exportar.'
   },
   {
+    id: 10, icon: '🎬', img: 'images/capcut-pro.jpeg',
+    category: 'diseno',
+    title: 'CapCut Pro / 3 Meses',
+    desc: 'Se te brinda una cuenta',
+    detail: 'Acceso inmediato · Entrega digital',
+    priceSoles: 35, priceUSDT: 12,
+    fullDesc: '<strong>IA de Edición Pro:</strong> Elimina fondos de video sin pantalla verde, usa retoque corporal avanzado y vincula objetos al movimiento con Seguimiento de Cámara.<br><br><strong>Recursos Exclusivos:</strong> Acceso total a efectos, transiciones, filtros y una biblioteca de música y sonidos premium sin marcas de agua.<br><br><strong>Audio Inteligente:</strong> Genera subtítulos automáticos con estilos Pro, elimina el ruido de fondo y separa la voz de la música con un solo clic.<br><br><strong>Calidad de Cine:</strong> Exporta tus proyectos en máxima resolución 4K a 60 FPS para una fluidez profesional en cualquier pantalla.<br><br><strong>Nube y Marca Limpia:</strong> Sincroniza tus proyectos entre PC y celular con almacenamiento ampliado y elimina cualquier logo de CapCut al exportar.'
+  },
+  {
     id: 6, icon: '🖥️', img: 'images/windows-11-pro.jpeg',
     category: 'sistema',
     title: 'Windows 11 Pro / Permanente',
@@ -152,13 +161,11 @@ function renderProducts() {
           <p class="card-detail">${p.detail}</p>
           <div class="card-price">
             <div class="price-tag price-tag--soles">
-              <span class="price-label">S/</span>
-              <span class="price-value">${p.priceSoles}</span>
+              <span class="price-value">S/ ${p.priceSoles}</span>
             </div>
             <span class="price-divider">ó</span>
             <div class="price-tag price-tag--usdt">
-              <span class="price-value">${p.priceUSDT}</span>
-              <span class="price-label">USDT</span>
+              <span class="price-value">${p.priceUSDT} USDT</span>
             </div>
           </div>
           <div class="card-actions">
@@ -176,14 +183,10 @@ function renderProducts() {
             </button>
           </div>
           <div class="card-payment-methods">
-            <span class="pay-badge yape-badge" title="Yape">yape</span>
-            <span class="pay-badge plin-badge" title="Plin">plin</span>
-            <span class="pay-badge binance-badge" title="Binance">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 12l-4-4-4 4 1.5 1.5L12 11l2.5 2.5L16 12zM12 4L8 8l1.5 1.5L12 7l2.5 2.5L16 8l-4-4zM12 20l4-4-1.5-1.5L12 17l-2.5-2.5L8 16l4 4zM4 12l4-4 1.5 1.5L7 12l2.5 2.5L8 16l-4-4zm16 0l-4 4-1.5-1.5L17 12l-2.5-2.5L16 8l4 4z"/></svg>
-            </span>
-            <span class="pay-badge paypal-badge" title="PayPal">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.067 8.478c.492.88.556 2.014.3 3.327-.74 3.806-3.276 5.12-6.514 5.12h-.5a.805.805 0 00-.794.68l-.04.22-.63 3.993c-.032.201-.24.382-.477.382h-3.32c-.317 0-.54-.287-.492-.61l2.583-16.14c.045-.29.314-.509.61-.509h4.38c2.18-.009 3.52.277 4.195 1.258.497.72.636 1.636.564 2.51l.135-.231zm-3.411 2.378c.178-1.121.144-1.928-.276-2.518-.328-.46-.867-.655-1.633-.666h-2.146l-1.93 12.064h2.2a.804.804 0 00.793-.68l.044-.279.462-2.923c.03-.201.24-.382.476-.382h.682c2.094 0 3.73-.83 4.223-3.084.184-1.002.106-1.527-.2-1.89l-.695.358z"/></svg>
-            </span>
+            <img src="images/yape-logo.png" alt="Yape" class="pay-logo-img" onerror="this.outerHTML='<span class=\\'pay-badge yape-badge\\'>yape</span>'" />
+            <img src="images/plin-logo.png" alt="Plin" class="pay-logo-img" onerror="this.outerHTML='<span class=\\'pay-badge plin-badge\\'>plin</span>'" />
+            <img src="images/binance-logo.png" alt="Binance" class="pay-logo-img" onerror="this.outerHTML='<span class=\\'pay-badge binance-badge\\'>binance</span>'" />
+            <img src="images/paypal-logo.png" alt="PayPal" class="pay-logo-img" onerror="this.outerHTML='<span class=\\'pay-badge paypal-badge\\'>paypal</span>'" />
           </div>
           <div class="card-full-desc">
             <p>${p.fullDesc}</p>
